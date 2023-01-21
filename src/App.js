@@ -67,9 +67,6 @@ function App() {
       md: forge.md.sha256.create(),
     });
 
-    console.log(encryptedUsername);
-    console.log(encryptedPassword);
-
     const encodedUsername = forge.util.encode64(encryptedUsername);
     const encodedPassword = forge.util.encode64(encryptedPassword);
     url.searchParams.append("username", encodedUsername);
@@ -94,7 +91,6 @@ function App() {
         }
         setData(arrayOfData);
         console.table(arrayOfData);
-        console.log(arrayOfData[0][0]);
 
         if (
           arrayOfData[0][0].includes("Error occurred while trying to proxy")
@@ -146,9 +142,6 @@ function App() {
     const encryptedPassword = publicKey.encrypt(password, "RSA-OAEP", {
       md: forge.md.sha256.create(),
     });
-
-    console.log(encryptedUsername);
-    console.log(encryptedPassword);
 
     const encodedUsername = forge.util.encode64(encryptedUsername);
     const encodedPassword = forge.util.encode64(encryptedPassword);
