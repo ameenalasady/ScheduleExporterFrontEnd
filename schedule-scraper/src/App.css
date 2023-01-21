@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+    margin: 0;
+    background-color: hsl(240, 100%, 10%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    height: 100vh;
+}
+
+.maindiv {
+    background-color: hsl(240, 100%, 10%);
+}
+
+.maintextcontainer {
+    display: flex;
+    justify-content: center;
+    /* position: relative;
+    top: 15vh; */
+    text-align: center;
+    padding-top: 20vh;
+}
+
+.maintext {
+    height: auto;
+    color: white;
+    font-size: 2.3em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.mainpage {
+    display: none;
+    height: 45vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginsection {
+    border-radius: 10px;
+    padding: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-color: white;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.usernameinputfield,
+.passwordinputfield {
+    margin-bottom: 1.5em;
+    display: flex;
+    width: fit-content;
+    color: white;
+}
+
+.actionbuttons {
+    display: grid;
+    height: 5em;
+}
+
+.separation {
+    height: 1em;
+}
+
+.contacticonscontainer {
+    /* grid container styles */
+    /* position: relative;
+    bottom: 20vh; */
+    padding-top: 2em;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    width: 20vw;
+    min-width: 350px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+}
+
+.grid-item {
+    position: relative;
+    /* set the grid items as position relative */
+    width: 100%;
+    /* set the width to 100% */
+    height: 100%;
+    /* set the height to 100% */
+}
+
+.contacticon {
+    /* icon container styles */
+    position: absolute;
+    /* set the icon as position absolute */
+    top: 0;
+    /* set the top to 0 */
+    left: 0;
+    /* set the left to 0 */
+    bottom: 0;
+    /* set the bottom to 0 */
+    right: 0;
+    /* set the right to 0 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transform: scale(2.5);
+    height: 0;
+}
+
+.tablepage {
+    display: none;
+    width: 60vw;
+    margin: 0 auto;
+    max-height: 75vh;
+    justify-content: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* padding: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em; */
+}
+
+.table {
+    width: 60vw;
+    display: flex;
+    /* margin: 0 auto; */
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: white;
+    /* border: 2px solid #357633; */
+    border-radius: 10px;
+    overflow-x: hidden;
+}
+
+.tablecells {
+    text-align: center !important;
+}
+
+.tablescreen {
+    height: 70vh;
+    display: none;
+}
+
+.backbutton {
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.activeflex {
+    display: flex;
+}
+
+.activeblock {
+    display: block;
+}
