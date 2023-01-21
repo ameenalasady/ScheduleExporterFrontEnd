@@ -263,7 +263,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="contacticonscontainer">
+      <div className="contacticonscontainer" style={displayTitle}>
         <div className="grid-item">
           <a href="https://github.com/ameenalasady" className="contacticon">
             <GitHubIcon />
@@ -291,7 +291,7 @@ function App() {
           <Scrollbars
             className="tableContents"
             autoHide
-            style={{ width: "60vw", height: "80vh" }}
+            style={{ width: "80vw", height: "80vh" }}
           >
             <Table stickyHeader>
               <TableHead>
