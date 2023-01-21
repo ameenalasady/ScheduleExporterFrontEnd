@@ -235,16 +235,16 @@ function App() {
   return (
     <div className="maindiv" style={{ overflow: "hidden" }}>
       <div className="maintextcontainer" style={displayTitle}>
-        <p className="maintext"> Western Schedule Exporter </p>{" "}
-      </div>{" "}
+        <p className="maintext"> Western Schedule Exporter </p>
+      </div>
       <div className="mainpage activeflex" id="mainpage">
         <div className="loginsection">
           <div className="usernameinputfield">
-            <UsernameInput value={username} setValue={setUsername} />{" "}
-          </div>{" "}
+            <UsernameInput value={username} setValue={setUsername} />
+          </div>
           <div className="passwordinputfield">
-            <PasswordInput value={password} setValue={setPassword} />{" "}
-          </div>{" "}
+            <PasswordInput value={password} setValue={setPassword} />
+          </div>
           <div className="actionbuttons">
             <LoadingButton
               loading={loadingTable}
@@ -254,9 +254,9 @@ function App() {
               onClick={handleSubmit}
               style={LoadingButtonColor}
             >
-              {previewText}{" "}
-            </LoadingButton>{" "}
-            <div className="separation"> </div>{" "}
+              {previewText}
+            </LoadingButton>
+            <div className="separation"> </div>
             <LoadingButton
               loading={loadingDownload}
               loadingPosition="end"
@@ -265,33 +265,33 @@ function App() {
               onClick={handleDownload}
               style={DownloadButtonColor}
             >
-              {downloadText}{" "}
-            </LoadingButton>{" "}
-          </div>{" "}
-        </div>{" "}
-      </div>{" "}
+              {downloadText}
+            </LoadingButton>
+          </div>
+        </div>
+      </div>
       <div className="contacticonscontainer">
         <div className="grid-item">
           <a href="https://github.com/ameenalasady" className="contacticon">
             <GitHubIcon />
-          </a>{" "}
-        </div>{" "}
+          </a>
+        </div>
         <div className="grid-item">
           <a
             href="https://www.linkedin.com/in/ameenalasady/"
             className="contacticon"
           >
             <LinkedInIcon />
-          </a>{" "}
-        </div>{" "}
+          </a>
+        </div>
         <div className="grid-item">
           <a
             href="https://ameenalasady.github.io/Personal-Website/"
             className="contacticon"
           >
             <WebAssetIcon />
-          </a>{" "}
-        </div>{" "}
+          </a>
+        </div>
       </div>
       <div className="tablepage" id="tablepage">
         <div className="table">
@@ -303,33 +303,28 @@ function App() {
             <Table stickyHeader>
               <TableHead>
                 <TableRow>
-                  {" "}
                   {data[0] &&
                     data[0].map((header, index) => (
                       <TableCell className="tablecells" key={index}>
-                        {" "}
-                        {header}{" "}
+                        {header}
                       </TableCell>
-                    ))}{" "}
-                </TableRow>{" "}
-              </TableHead>{" "}
+                    ))}
+                </TableRow>
+              </TableHead>
               <TableBody>
-                {" "}
                 {data.slice(1).map((row, rowIndex) => (
                   <TableRow key={rowIndex}>
-                    {" "}
                     {row.map((cell, cellIndex) => (
                       <TableCell className="tablecells" key={cellIndex}>
-                        {" "}
-                        {cell}{" "}
+                        {cell}
                       </TableCell>
-                    ))}{" "}
+                    ))}
                   </TableRow>
-                ))}{" "}
-              </TableBody>{" "}
-            </Table>{" "}
-          </Scrollbars>{" "}
-        </div>{" "}
+                ))}
+              </TableBody>
+            </Table>
+          </Scrollbars>
+        </div>
         <div className="backbutton">
           <Button
             onClick={goBack}
@@ -337,10 +332,10 @@ function App() {
             startIcon={<ArrowBackIosIcon />}
             style={{ backgroundColor: "#512682", color: "white" }}
           >
-            Go Back{" "}
-          </Button>{" "}
-        </div>{" "}
-      </div>{" "}
+            Go Back
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }
