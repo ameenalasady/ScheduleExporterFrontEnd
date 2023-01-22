@@ -237,6 +237,7 @@ function App() {
             href="https://github.com/ameenalasady/ScheduleExporterBackEnd"
             className="opensorucelink"
             target="_blank"
+            rel="noreferrer noopener"
           >
             open soruce!
           </a>
