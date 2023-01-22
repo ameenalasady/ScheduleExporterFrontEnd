@@ -118,7 +118,7 @@ html {
 
 .tablepage {
     display: none;
-    width: 80vw;
+    width: 70vw;
     margin: 0 auto;
     max-height: 75vh;
     justify-content: center;
@@ -131,8 +131,14 @@ html {
     padding-bottom: 3em; */
 }
 
+.tableitself {
+    padding: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
 .table {
-    width: 80vw;
+    width: 70vw;
     display: flex;
     /* margin: 0 auto; */
     justify-content: center;

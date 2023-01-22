@@ -291,9 +291,9 @@ function App() {
           <Scrollbars
             className="tableContents"
             autoHide
-            style={{ width: "80vw", height: "80vh" }}
+            style={{ width: "70vw", height: "80vh" }}
           >
-            <Table stickyHeader>
+            <Table stickyHeader className="tableitself">
               <TableHead>
                 <TableRow>
                   {data[0] &&
@@ -318,6 +318,7 @@ function App() {
             </Table>
           </Scrollbars>
         </div>
+
         <div className="backbutton">
           <Button
             onClick={goBack}
