@@ -230,12 +230,13 @@ function App() {
       <div className="maintextcontainer" style={displayTitle}>
         <p className="maintext">Western Schedule Exporter</p>
       </div>
-      <div className="subtext">
+      <div className="subtext" style={displayTitle}>
         This tool is&nbsp;
         <span>
           <a
             href="https://github.com/ameenalasady/ScheduleExporterBackEnd"
             className="opensorucelink"
+            target="_blank"
           >
             open soruce!
           </a>

@@ -26,12 +26,6 @@ html {
     padding-top: 20vh;
 }
 
-@media only screen and (max-width: 504px) {
-    .maintextcontainer {
-        padding-top: 15vh;
-    }
-}
-
 .maintext {
     height: auto;
     color: white;
@@ -152,7 +146,8 @@ html {
 }
 
 .tableitself {
-    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
     padding-top: 3em;
     padding-bottom: 3em;
 }
@@ -191,4 +186,16 @@ html {
 
 .activeblock {
     display: block;
+}
+
+@media only screen and (max-width: 504px) {
+    .maintextcontainer {
+        padding-top: 15vh;
+    }
+}
+
+@media only screen and (max-width: 1325px) {
+    .tableitself {
+        padding: 0;
+    }
 }
