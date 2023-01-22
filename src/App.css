@@ -26,6 +26,12 @@ html {
     padding-top: 20vh;
 }
 
+@media only screen and (max-width: 504px) {
+    .maintextcontainer {
+        padding-top: 15vh;
+    }
+}
+
 .maintext {
     height: auto;
     color: white;
@@ -43,6 +49,10 @@ html {
     align-items: center;
     font-size: 1.5em;
     padding-top: 0.5em;
+}
+
+.opensorucelink {
+    color: #512682;
 }
 
 .mainpage {

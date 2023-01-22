@@ -235,7 +235,7 @@ function App() {
         <span>
           <a
             href="https://github.com/ameenalasady/ScheduleExporterBackEnd"
-            className=""
+            className="opensorucelink"
           >
             open soruce!
           </a>
