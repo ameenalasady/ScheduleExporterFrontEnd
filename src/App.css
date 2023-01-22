@@ -35,9 +35,19 @@ html {
     justify-content: center;
 }
 
+.subtext {
+    display: flex;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+}
+
 .mainpage {
     display: none;
-    height: 45vh;
+    height: 25em;
     width: 100vw;
     align-items: center;
     justify-content: center;

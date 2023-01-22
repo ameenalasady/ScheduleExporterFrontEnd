@@ -228,8 +228,20 @@ function App() {
   return (
     <div className="maindiv" style={{ overflow: "hidden" }}>
       <div className="maintextcontainer" style={displayTitle}>
-        <p className="maintext"> Western Schedule Exporter </p>
+        <p className="maintext">Western Schedule Exporter</p>
       </div>
+      <div className="subtext">
+        This tool is&nbsp;
+        <span>
+          <a
+            href="https://github.com/ameenalasady/ScheduleExporterBackEnd"
+            className=""
+          >
+            open soruce!
+          </a>
+        </span>
+      </div>
+
       <div className="mainpage activeflex" id="mainpage">
         <div className="loginsection">
           <div className="usernameinputfield">
