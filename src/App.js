@@ -418,21 +418,24 @@ function App() {
       </div>
 
       <div className="calendarview" style={calendarDisplay}>
-        <FullCalendar
-          contentHeight="auto"
-          eventBackgroundColor="transparent"
-          plugins={[dayGridPlugin]}
-          initialView="dayGridWeek"
-          events={events}
-          displayEventEnd="true"
-          hiddenDays={[0, 6]}
-          dayHeaderFormat={{ weekday: "long" }}
-          eventTimeFormat={{
-            hour: "numeric",
-            minute: "2-digit",
-            meridiem: "short",
-          }}
-        />
+        <Scrollbars autoHide="true">
+          <FullCalendar
+            contentHeight="auto"
+            eventBackgroundColor="transparent"
+            plugins={[dayGridPlugin]}
+            initialView="dayGridWeek"
+            events={events}
+            displayEventEnd="true"
+            hiddenDays={[0, 6]}
+            dayHeaderFormat={{ weekday: "long" }}
+            eventTimeFormat={{
+              hour: "numeric",
+              minute: "2-digit",
+              meridiem: "short",
+            }}
+          />
+        </Scrollbars>
+
         <div className="calendarviewbutton">
           <Button
             onClick={() => {
