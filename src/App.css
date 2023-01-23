@@ -15,6 +15,7 @@ html {
 
 .maindiv {
     background-color: hsl(240, 100%, 10%);
+    height: 100vh;
 }
 
 .maintextcontainer {
@@ -51,7 +52,7 @@ html {
 
 .mainpage {
     display: none;
-    height: 25em;
+    height: 28em;
     width: 100vw;
     align-items: center;
     justify-content: center;
@@ -65,6 +66,7 @@ html {
     background-color: white;
     margin-left: 1em;
     margin-right: 1em;
+    height: 18em;
 }
 
 .usernameinputfield,
@@ -186,6 +188,79 @@ html {
 
 .activeblock {
     display: block;
+}
+
+.calendarview {
+    color: white;
+    font-size: 1.2em;
+    width: 80vw;
+    margin: 0 auto;
+    height: 80vh;
+    padding-top: 8vh;
+}
+
+.fc-event {
+    flex-direction: column-reverse;
+}
+
+.fc-event,
+.fc-event-start,
+.fc-event-end {
+    color: black;
+}
+
+.fc-event-title {
+    height: 0;
+}
+
+.fc-daygrid-event-harness {
+    padding: 0.5em;
+}
+
+.fc-event:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+.fc-event,
+.fc-event-start,
+.fc-event-end,
+.fc-event-future,
+.fc-daygrid-event,
+.fc-daygrid-dot-event {
+    height: 5em;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background: white;
+    border-radius: 7px;
+}
+
+.fc-scrollgrid {
+    border-radius: 7px;
+}
+
+.fc-scrollgrid-sync-inner {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.fc-prev-button,
+.fc-button,
+.fc-button-primary {
+    background-color: #512682;
+    background: #512682 !important;
+    border-color: #512682 !important;
+}
+
+.fc-col-header-cell-cushion {
+    font-size: 1.5em;
+}
+
+.calendarviewbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
 }
 
 @media only screen and (max-width: 504px) {

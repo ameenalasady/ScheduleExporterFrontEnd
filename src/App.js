@@ -11,6 +11,9 @@ import forge from "node-forge";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WebAssetIcon from "@mui/icons-material/WebAsset";
+import FullCalendar from "@fullcalendar/react"; // must go before plugins
+import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 import "./App.css";
 import {
@@ -26,6 +29,7 @@ function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loadingTable, setLoadingTable] = useState(false);
+  const [loadingCalendar, setLoadingCalendar] = useState(false);
   const [loadingDownload, setLoadingDownload] = useState(false);
   const [LoadingButtonColor, setLoadingButtonColor] = useState({
     backgroundColor: "#512682",
@@ -36,12 +40,18 @@ function App() {
     color: "white",
   });
 
+  const [calendarDisplay, setCalendarDisplay] = useState({
+    display: "none",
+  });
+
   const [previewText, setPreviewText] = useState("Preview Schedule");
   const [downloadText, setDownloadText] = useState("Download");
 
   const [displayTitle, setDisplayTitle] = useState({
     display: "flex",
   });
+
+  const [events, setEvents] = useState([{}]);
 
   let status;
 
@@ -206,6 +216,53 @@ function App() {
       });
   }
 
+  async function handleCalendarView(event) {
+    event.preventDefault();
+    setPreviewText("Preview Schedule");
+    setLoadingButtonColor({
+      backgroundColor: "#512682",
+      color: "white",
+    });
+    setLoadingCalendar(true);
+    const url = new URL(
+      "https://flask-production-9caa.up.railway.app/calendarview"
+    );
+
+    const publicKeyResponse = await fetch(
+      "https://flask-production-9caa.up.railway.app/public_key"
+    );
+    const public_pem = await publicKeyResponse.text();
+    const publicKey = forge.pki.publicKeyFromPem(public_pem);
+    const encryptedUsername = publicKey.encrypt(username, "RSA-OAEP", {
+      md: forge.md.sha256.create(),
+    });
+    const encryptedPassword = publicKey.encrypt(password, "RSA-OAEP", {
+      md: forge.md.sha256.create(),
+    });
+
+    const encodedUsername = forge.util.encode64(encryptedUsername);
+    const encodedPassword = forge.util.encode64(encryptedPassword);
+    url.searchParams.append("username", encodedUsername);
+    url.searchParams.append("password", encodedPassword);
+
+    fetch(url, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => setEvents(data))
+      .then(() => {
+        setCalendarDisplay({ display: "block" });
+        const remove = document.querySelector("#mainpage");
+        removeCSS(remove, "activeflex");
+        setLoadingCalendar(false);
+        setDisplayTitle({
+          display: "none",
+        });
+      });
+  }
+
   function addCSS(element, className) {
     element.classList.add(className);
   }
@@ -263,7 +320,22 @@ function App() {
             >
               {previewText}
             </LoadingButton>
+
             <div className="separation"> </div>
+
+            <LoadingButton
+              loading={loadingCalendar}
+              loadingPosition="end"
+              variant="contained"
+              endIcon={<CalendarMonthIcon />}
+              onClick={handleCalendarView}
+              style={LoadingButtonColor}
+            >
+              Calendar View
+            </LoadingButton>
+
+            <div className="separation"> </div>
+
             <LoadingButton
               loading={loadingDownload}
               loadingPosition="end"
@@ -336,6 +408,39 @@ function App() {
         <div className="backbutton">
           <Button
             onClick={goBack}
+            variant="contained"
+            startIcon={<ArrowBackIosIcon />}
+            style={{ backgroundColor: "#512682", color: "white" }}
+          >
+            Go Back
+          </Button>
+        </div>
+      </div>
+
+      <div className="calendarview" style={calendarDisplay}>
+        <FullCalendar
+          contentHeight="auto"
+          eventBackgroundColor="transparent"
+          plugins={[dayGridPlugin]}
+          initialView="dayGridWeek"
+          events={events}
+          displayEventEnd="true"
+          hiddenDays={[0, 6]}
+          dayHeaderFormat={{ weekday: "long" }}
+          eventTimeFormat={{
+            hour: "numeric",
+            minute: "2-digit",
+            meridiem: "short",
+          }}
+        />
+        <div className="calendarviewbutton">
+          <Button
+            onClick={() => {
+              setCalendarDisplay({ display: "none" });
+              const add = document.querySelector("#mainpage");
+              addCSS(add, "activeflex");
+              setDisplayTitle({ display: "flex" });
+            }}
             variant="contained"
             startIcon={<ArrowBackIosIcon />}
             style={{ backgroundColor: "#512682", color: "white" }}
