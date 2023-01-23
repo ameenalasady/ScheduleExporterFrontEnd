@@ -218,7 +218,7 @@ html {
 }
 
 .fc-event:hover {
-    background: gray;
+    background: gray !important;
     cursor: pointer;
 }
 
@@ -261,6 +261,11 @@ html {
     justify-content: center;
     align-items: center;
     padding-top: 1em;
+}
+
+.fc-dayGridWeek-view,
+.fc-view fc-daygrid {
+    min-width: 900px;
 }
 
 @media only screen and (max-width: 504px) {
