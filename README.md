@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Schedule Export Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains the frontend code for the Schedule Export web application. The application is built using React.js and allows students to easily export their class schedule to be imported into any schedule management app.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+To run the application locally, clone the repository and run the following commands:
 
-### `npm start`
+```
+npm install
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application will be running on `http://localhost:3000/`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Link to the Webapp
 
-### `npm test`
+You can access the live version of the webapp [here](https://western-schedule-exporter.web.app/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Link to the Backend Repository
 
-### `npm run build`
+The backend for this application can be found [here](https://github.com/ameenalasady/ScheduleExporterBackEnd).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pull Requests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I welcome and encourage contributions to this project in the form of pull requests. If you would like to make a change or addition, please follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Fork the repository to your own GitHub account.
+2. Clone the repository to your local machine.
+3. Create a new branch for your changes.
+4. Make the desired changes, ensuring that you adhere to the project's coding conventions and that you have added relevant tests and documentation.
+5. Push your changes to your fork on GitHub.
+6. Submit a pull request to the main repository.
 
-### `npm run eject`
+Please ensure that your pull request includes a detailed description of the changes you have made and why they are necessary. I will review your request and may ask for additional changes before it is merged.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Issues
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you encounter any issues while using the application, or if you have ideas for new features, please open an issue on the GitHub repository. When opening an issue, please provide as much detail as possible, including the steps required to reproduce the issue, any error messages that were displayed, and your system configuration.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Please be sure to check the existing open and closed issues before creating a new one. This will help me to avoid duplication and keep the issue tracker organised. If you find an existing issue that describes your problem, you can add a comment with additional details or a "+1" to indicate that you are also experiencing the issue.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I value your feedback and contributions, and will do my best to address and resolve any issues that are reported.
