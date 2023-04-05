@@ -1,5 +1,8 @@
 # Schedule Export Frontend
 
+## IMPORTANT: AS OF APRIL 5TH, THIS TOOL NO LONGER WORKS DUE TO THE INTRODUCTION OF 2FA TO STUDENT CENTER. THIS WILL BE FIXED IN THE FUTURE.
+
+
 This repository contains the frontend code for the Schedule Export web application. The application is built using React.js and allows students to easily export their class schedule to be imported into any schedule management app.
 
 ## Usage
