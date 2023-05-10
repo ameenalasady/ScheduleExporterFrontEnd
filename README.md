@@ -1,6 +1,6 @@
 # Schedule Export Frontend
 
-## IMPORTANT: AS OF APRIL 5TH, THIS TOOL NO LONGER WORKS DUE TO THE INTRODUCTION OF 2FA TO STUDENT CENTER. THIS WILL BE FIXED IN THE FUTURE.
+## Important Notice: Due to the introduction of 2FA on the Student Center, it has become too costly for me to continue hosting this web app. This is because Selenium is required to complete the 2FA process. However, you can still use this tool on your local machine by following the instructions [here](https://github.com/ameenalasady/uwoTimetableCSV).
 
 This repository contains the frontend code for the Schedule Export web application. The application is built using React.js and allows students to easily export their class schedule to be imported into any schedule management app.
 
